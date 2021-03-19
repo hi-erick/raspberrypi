@@ -13,7 +13,7 @@ base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
 device_file = device_folder + '/w1_slave'
 
-#setting up moisture sensor
+#setting up moisture/light sensor
 i2c = busio.I2C(board.SCL, board.SDA)
 veml7700 = adafruit_veml7700.VEML7700(i2c)
 ads = ADS.ADS1115(i2c)
